@@ -1,15 +1,16 @@
 {
-  "name": "vue2-multiPageCli",
+  "name": "CHARLEY_MUTLI_KIT",
   "version": "1.0.0",
-  "description": "webpack4搭建vue2多页应用脚架",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env BUILD_MODE=dev webpack-dev-server ",
-    "build": "cross-env BUILD_MODE=prod webpack ",
-    "serve": "http-server ./dist -p 8089 -o"
+    "dev": "cross-env ENVIROMENT=dev webpack-dev-server",
+    "build": "cross-env ENVIROMENT=prod webpack",
+    "build:report": "cross-env OPTION=report npm run build",
+    "serve": "http-server ./dist -o"
   },
   "keywords": [],
-  "author": "Chester",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.6.4",
@@ -18,7 +19,6 @@
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.2",
     "cross-env": "^5.2.0",
@@ -50,7 +50,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "vue": "^2.5.16",
-    "vuex": "^3.0.1"
+    "vue": "^2.5.16"
   }
 }
