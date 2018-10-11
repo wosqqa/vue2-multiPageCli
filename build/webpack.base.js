@@ -46,12 +46,13 @@ module.exports = {
     alias: {
       '@components': path.resolve(__dirname, '../src/components'),
       '@styles': path.resolve(__dirname, '../src/styles'),
+      '@js': path.resolve(__dirname, '../src/scripts'),
     },
     extensions:['*','.css','.js','.vue']
   },
   plugins: [
     new VueLoaderPlugin(),
-    new CopyWebpackPlugin([
+    new CopyWebpackPlugin([//打包复制文件目录
       {
         from: path.resolve(__dirname, '../public'),
         to: path.resolve(__dirname, '../dist'),
@@ -59,7 +60,7 @@ module.exports = {
       },
       {
         from: path.resolve(__dirname, '../src/scripts/lib'),
-        to: path.resolve(__dirname, '../dist')
+        to: path.resolve(__dirname, '../dist/js/lib')
       }
     ]),
     ...HTMLPlugins,

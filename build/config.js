@@ -2,7 +2,7 @@ module.exports = {
   HTMLDirs: [
     {
       page: 'index',
-      title: '首页'
+      title: '邀请好友'
     },
     {
       page: 'list',
@@ -11,7 +11,12 @@ module.exports = {
     {
       page: 'detail',
       title: '详情页'
+    },
+    {
+      page: 'to_invite',
+      title: '输入邀请码'
     }
+    
   ],
   cssPublicPath: '../',
   imgOutputPath: 'img/',
