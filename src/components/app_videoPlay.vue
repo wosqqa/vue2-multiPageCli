@@ -1,8 +1,8 @@
 <template>
 		<div class="video-play">
 			<div>
-					<video controls autoplay preload="true"  class="my-player" poster="./static/img/share/shipinsy.png">
-							<source src="./static/img/share/weixinyaoqing.mp4" type="video/mp4">
+					<video controls autoplay preload="true"  class="my-player" poster="http://resources.dftoutiao.com/apprentice2__test/static/img/share/shipinsy.png">
+							<source src="http://resources.dftoutiao.com/apprentice2__test/static/img/share/weixinyaoqing.mp4" type="video/mp4">
 					</video>	
 			</div>
 		</div>

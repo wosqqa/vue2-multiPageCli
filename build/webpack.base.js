@@ -20,7 +20,7 @@ config.HTMLDirs.forEach(item => {
 
 const env = process.env.BUILD_MODE.trim();
 let ASSET_PATH = '/';
-if (env === 'prod') ASSET_PATH = '//abc.com/static/'; // 静态资地址
+if (env === 'prod') ASSET_PATH = '//abc.com/'; // 静态资地址
 
 module.exports = {
   entry: Entries,

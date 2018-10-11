@@ -1,7 +1,7 @@
 <template>
 	<div class="app_inviteCode">
 		 <div class="code-container">
-			<div class="code-box1">填写好友邀请码，立得<span class="text-red">{{codeData.geter_money}}元</span>奖励！</div>
+			<div class="code-box1">222填写好友邀请码，立得<span class="text-red">{{codeData.geter_money}}元</span>奖励！</div>
 			<div class="code-box2"><input type="text" v-model="inviteCode" class="inviteCode" placeholder="输入邀请码  (向介绍人索取)"></div>
 			<div class="code-box3" @click="submitCode">提交邀请码</div>
 			<div class="code-copy">
@@ -25,7 +25,6 @@
 <script>
 import {getInviteCode,jsonpGetData} from '../../scripts/api/api';
 import GLOBAL from '../../scripts/util/app.global'
-
 	export default {
 		data() {
 			return {
