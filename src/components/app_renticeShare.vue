@@ -36,7 +36,7 @@
 						<div  class="share-bgimg share-qf"><span class="rf-text-red" ></span></div>
 						<div  class="share-type">群发邀请</div>
 					</div>
-          			<div   v-if="urlParam.os !=='iOS'">
+          <div   v-if="urlParam.os !=='iOS'">
 						<div  class="share-bgimg"></div>
 						<div  class="share-type"></div>
 					</div>

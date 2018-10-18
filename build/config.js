@@ -18,9 +18,9 @@ module.exports = {
     }
     
   ],
-  cssPublicPath: '../',
-  imgOutputPath: 'img/',
-  fontOutputPath: 'font',
+  cssPublicPath: '../static/',
+  imgOutputPath: 'static/img/',
+  fontOutputPath: 'static/font',
   cssOutputPath: './css/styles.css',
   devServerOutputPath: '../dist',
 };

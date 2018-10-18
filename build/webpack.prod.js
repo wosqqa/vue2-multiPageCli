@@ -9,10 +9,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // 抽取css extract-text-webpack-plugin不再支持webpack4，官方出了mini-css-extract-plugin来处理css的抽取
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+//压缩css
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
+//开启 gzip 压缩
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const config = require('./config'); // 多页面的配置项
-const ASSET_PATH = '//abc.com/static/'; // 静态资地址
+const ASSET_PATH = '//resources.dftoutiao.com/apprentice2/static/'; // 静态资地址
 // 合并配置文件
 module.exports = webpackMerge(webpackBase, {
   mode: 'production',
@@ -37,7 +39,7 @@ module.exports = webpackMerge(webpackBase, {
           {
             loader: 'sass-resources-loader',
             options: {
-              resources: path.resolve(__dirname, '../src/styles/lib/main.scss'),
+              resources: path.resolve(__dirname, '../src/assets/scss/lib/main.scss'),
             },
           }
         ]
@@ -102,7 +104,14 @@ module.exports = webpackMerge(webpackBase, {
       dry: false,
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[chunkhash:8].css'
+      filename: 'static/css/[name].[chunkhash:8].css'
+    }),
+    new CompressionWebpackPlugin({
+      filename: '[path].gz[query]',
+      algorithm: 'gzip',
+      threshold: 1024,
+      test: /\.js$|\.css$|\.html$/,
+      minRatio: 0.8
     })
   ]
 });

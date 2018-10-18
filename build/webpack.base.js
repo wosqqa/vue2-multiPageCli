@@ -20,13 +20,13 @@ config.HTMLDirs.forEach(item => {
 
 const env = process.env.BUILD_MODE.trim();
 let ASSET_PATH = '/';
-if (env === 'prod') ASSET_PATH = '//abc.com/static/'; // 静态资地址
+if (env === 'prod') ASSET_PATH = '//resources.dftoutiao.com/apprentice2__test/static/'; // 静态资地址
 
 module.exports = {
   entry: Entries,
   output: {
     publicPath: ASSET_PATH,
-    filename: 'js/[name].[hash:8].js',
+    filename: 'static/js/[name].[hash:8].js',
     path: path.resolve(__dirname, '../dist'),
   },
   module: {
@@ -44,23 +44,21 @@ module.exports = {
   },
   resolve: { // 设置模块如何被解析
     alias: {
-      '@components': path.resolve(__dirname, '../src/components'),
-      '@styles': path.resolve(__dirname, '../src/styles'),
-      '@js': path.resolve(__dirname, '../src/scripts'),
+      '@': path.resolve('src'),
     },
     extensions:['*','.css','.js','.vue']
   },
   plugins: [
     new VueLoaderPlugin(),
     new CopyWebpackPlugin([//打包复制文件目录
-      {
+      {//复制public中的文件到static
         from: path.resolve(__dirname, '../public'),
-        to: path.resolve(__dirname, '../dist'),
+        to: path.resolve(__dirname, '../dist/static'),
         ignore: ['*.html']
       },
-      {
-        from: path.resolve(__dirname, '../src/scripts/lib'),
-        to: path.resolve(__dirname, '../dist/js/lib')
+      {//只复制js
+        from: path.resolve(__dirname, '../src/assets/js/lib'),
+        to: path.resolve(__dirname, '../dist/static/js')
       }
     ]),
     ...HTMLPlugins,

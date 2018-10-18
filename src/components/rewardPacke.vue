@@ -1,22 +1,37 @@
 <template>
 	  <div class="list-container">
-      <div class="list-container-box1">
+      <!-- <div class="list-container-box1">
           <div :class="navActive=='1' ? 'am-popover am-active' : 'am-popover'" @click="clickTab(1)">
               <div class="am-popover-inner">邀请奖励</div>
           </div>
-          <div :class="navActive=='2' ? 'am-popover am-active' : 'am-popover'" @click="clickTab(2)">
-              <div class="am-popover-inner">唤醒奖励</div>
-          </div>
-          <!-- <div :class="navActive=='2' ? 'am-popover am-active' : 'am-popover'"  @click="clickTab(2)">
+          <div :class="navActive=='2' ? 'am-popover am-active' : 'am-popover'"  @click="clickTab(2)">
               <div class="am-popover-re" v-if="myParam.activity.length!= activeLength">热</div>
               <div class="am-popover-inner">最新活动</div>
-          </div> -->
-      </div>
+          </div>
+      </div> -->
       <div class="list-container-box2">
           <div class="list-box3-luck"   v-show="navActive=='1'">
-              <div class="list-title" >每邀请1名好友，即可获<span>10元</span>现金奖励</div>
+              <div class="list-title" >每邀请1名好友，即可获<span>{{myParam.moneySum}}元</span>现金奖励</div>
               <div class="list-subtitle" >好友通过阅读获得20金币奖励，您即可拿到当日现金奖励</div>
               <div class="list-conter">
+                  <div class="list-conter-box2">{{myParam.money[0]}}元</div>
+                  <div class="list-conter-box2">{{myParam.money[1]}}元</div>
+                  <div class="list-conter-box2">{{myParam.money[2]}}元</div>
+              </div>
+              <div class="list-conter" style="margin: 0.3rem 0 0 1.15rem;">
+                  <div class="list-conter-box4">
+                    <div class="list-conter-boxs"></div><div class="list-conter-boxx"></div>
+                    <div class="list-conter-boxs"></div><div class="list-conter-boxx"></div>
+                    <div class="list-conter-boxs"></div>
+                  </div>
+              </div>
+              <div class="list-conter">
+                  <div class="list-conter-box3">第1次</div>
+                  <div class="list-conter-box3">第2次</div>
+                  <div class="list-conter-box3">第3次</div>
+              </div>
+
+              <!-- <div class="list-conter">
                   <div class="list-conter-box">
                     <div class="list-conter-day">第一天</div>
                     <div  class="list-conter-txt"><span class="list-conter-dayD">获得</span><span class="list-conter-dayE"><span>{{myParam.money[0] | numFilter2}}</span>元</span></div>
@@ -49,44 +64,47 @@
                   </div>
                   <div class="list-conter-box" style="border: 0px solid #e8e8e8;">
                   </div>
-              </div>
+              </div> -->
               <div class="list-ling" >
+                <!-- 当前待领取的现金奖励：<span>￥58.56</span> -->
                 </div>
               <div class="list-title" >如何提升邀请成功率？</div>
               <div class="list-subtitle" >最高可提高成功率200%以上</div>
               <div class="list-li" ><div  class="list-li-title">1</div><div>邀请您的家人、朋友、同学、同事成功率最高。</div> </div>
               <div class="list-li" ><div  class="list-li-title">2</div><div>同时分享到3个以上微信群/QQ群，成功率提升<span class="list-li-red">200%</span>以上。</div> </div>
               <div class="list-li" ><div  class="list-li-title">3</div><div>可以告诉您的朋友：在注册后可收到奖励，通过任务和阅读都可以产生现金奖励，并可以提现。</div></div>
+<!--               
+              <div class="list-li" v-if="!isCopy">
+                <div class="list-li-share">
+                  <div class="list-title" >复制以下文案分享给好友</div>
+                    <textarea class="list-li-are"  style="-webkit-user-select: auto;" contenteditable="true" v-model="myParam.invite_share_template"></textarea>
+                </div> 
+              </div> -->
 
           </div>
-          <div class="list-box3-obtained" id="list-box3-roll-2"  v-show="navActive=='2'">
-              <div v-if="wakeupList.length>0" >
-                <userItem v-if="relodItem" v-for="(item,index) in wakeupList" :key="index" :userData='item' :userType='userType' :userIndex='index' @openWakeupDialog="openWakeupDialog"></userItem>
-              </div>
-              <div class="box3-obtained" v-else>
-                <div class="box3-obtained-a">暂时没有需要唤醒的好友</div>
-                <div class="box3-obtained-b" @click="openShare">赶紧去邀请好友吧</div>
-              </div>
+          <div class="list-box3-obtained" id="list-box3-roll-1"  v-show="navActive=='2'">
+							<div class="list-box3-roll" v-show="myParam.activity.length>0" >
+								<div class="list-txt">{{myParam.activity.length}}个活动进行中...</div>
+                <div class="list-hd">
+                    <div v-for="(item,index) in myParam.activity" :key="index" @click="lookActivity(item.activity_url,item.activity_img)" ><img :src="item.activity_img"></div>
+                </div>
+							</div>
+              <div class="list-txtNo"  v-show="myParam.activity.length==0">关注更多活动拿奖励~</div>
           </div>
       </div>
+      
   </div>
 </template>
 
 <script>
-import { wakeupApprenticeList,hostname,giveRedEnvelope,jsonpGetData } from "@/api/api";
+import { giveRedEnvelope,jsonpGetData } from "@/api/api";
 import GLOBAL from '@/assets/js/lib/app.global'
-const userItem = resolve => require(["@/components/userItem.vue"], resolve);
 export default {
   props: ["myParam","isCopy"],
-  components: {
-      userItem,
-	},
   data() {
     return {
-      navActive: "1",
-      userType:'hx',
+			navActive: "1",
       urlParam:'',
-      relodItem:true,
       remPx:'',
       divHeight:'',
       scrollTop: '',
@@ -96,9 +114,6 @@ export default {
 			envelopeData:'',
       oneData: [],
       twoData: [],
-      wakeupObj:'',
-      userIndex:'',
-      wakeupList:[],
       threeData: []
     };
   },
@@ -110,101 +125,39 @@ export default {
             return realVal.toFixed(1)
     },
   },
+  computed: {},
   created() {
-    let scope=this;
-    window.relodWakeupItem = function(){//重新更新list
-      scope.relodItem = false
-      scope.$nextTick(() => {
-        scope.relodItem = true
-      })
-    }
     this.urlParam=this.$route.query
     this.activeLength = localStorage.getItem("activeLength")==null ? 0:Number(localStorage.getItem("activeLength"));
-    this.wakeupApprenticeList();
   },
   watch: {
     navActive(curVal, oldVal) {
-      if(this.wakeupList.length>0){
-        this.$emit("changeBottomShow", curVal);
-      }
+      this.$emit("changeBottomShow", curVal);
     }
   },
   mounted() {
-    let scope=this;
+		//初始化数据
+    //  this.giveRedEnvelope()
   },
   methods: {
-    wakeupApprenticeList(){//获取页面参数
-				let scope=this;
-				let listObj={
-						param:{
-							accid: scope.urlParam.accid,
-							pg:scope.wakeupPage,
-							ime:scope.urlParam.ime,
-							apptypeid:scope.urlParam.apptypeid,
-							appqid:scope.urlParam.qid,
-							ver:scope.urlParam.appver,
-							machine:scope.urlParam.device,
-							plantform:scope.urlParam.os,
-						},
-						callback:'wakeupApprenticeListData',
-						url:wakeupApprenticeList,
+    lookActivity(Url,activityImg){//查看活动
+          let objLog ={
+						method:"uploadActivityLog",
+						thisurl: Url,
+						materialid:activityImg,
+						actentryid:1000010,
+						acttype: 'entry',
+          	plan: '',
+						actid:'sanwuchengtuan',
+						type:'click'
 					}
-				window.wakeupApprenticeListData = function(res) {
-          scope.wakeupList=res.data;
-          // scope.wakeupList = [
-          //     {
-          //         "accid": "500321520",
-          //         "headpic": "http://q.qlogo.cn/qqapp/1104948794/C26DA3363CD9DAE3305FBFEC9984ED41/100",
-          //         "nickname": "徐",
-          //         "mobile": "",
-          //         "tag": "100",
-          //         "bonus": "0"
-          //     },
-				}
-				jsonpGetData(listObj);
-      },
-    openShare(){
-       this.$emit("openPopup", true);
-       GLOBAL.App().sentLog(1410)
-    },
-    openWakeupDialog(item) {
-      item.type='wakeup';
-      openWakeupShare(item);
-      //打开弹层
-      // this.wakeupObj = item;
-      // this.wakeupObj.type='wakeup';
-      // this.wakeupDialog = true;
-      // document.getElementsByTagName('body')[0].style.position="fixed";
-    },
-    awakeAddBookApprentice(){//一键短信唤醒
-      let scope=this;
-				let wakeupList = []
-					for ( var i=0 ; i < scope.wakeupList.length ; i++ ){
-								let obj={};
-								let element = scope.wakeupList[i];
-								if((element.tag=='100'||element.tag=='666')&&element.mobile!=''){
-									obj ={
-										mobile:element.mobile,
-										accid:element.accid,
-									}
-									element.tag = '666'
-									wakeupList.push(obj);
-									scope.wakeupList.splice(i,1,element);
-								}
+					try {
+					GLOBAL.App().postMessage(objLog);
+					} catch (e) { 
+					console.error(e); 
 					}
-				let	objw = {
-            'method': 'directAwakeAddBookApprentice',
-            'awakeList':wakeupList,
-            'isApprientice':0
-          }
-					GLOBAL.App().postMessage(objw);
-          GLOBAL.App().sentLog(537)
-          GLOBAL.App().uploadActivityLog('',null,1250003,'wakeit','entry',"click",'');
+				 window.location.href = Url+'?random=' + Math.random() * 100000;
 		},
-    closeWakeupDialog(item){//关闭弹层
-      this.wakeupDialog = false;
-			document.getElementsByTagName('body')[0].style.position="static";
-    },
 		clickTab(index){
       let scope=this;
       scope.navActive= index
@@ -212,7 +165,6 @@ export default {
         GLOBAL.App().sentLog(1309)
       }else{
         GLOBAL.App().sentLog(1311)
-        GLOBAL.App().uploadActivityLog('',null,1800000,'invitefriend','show',"page",'');
         scope.activeLength = scope.myParam.activity.length
         localStorage.setItem("activeLength", JSON.stringify(scope.myParam.activity.length));
       }
@@ -281,9 +233,9 @@ export default {
             bottom: 0;
             left: 50%;
             margin-left: -.2rem;
+            border-radius: 0.5rem;
             width: .54rem;
-            height: 0.08rem;
-            border-radius: 0.1rem;
+            height: 2px;
             background: #f44b50;
         }
     }
@@ -306,8 +258,46 @@ export default {
       .list-conter{
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
-        margin: 0.1rem 0.22rem;
+        justify-content: space-between;
+        margin: 0.1rem 0.53rem;
+        .list-conter-box2{
+          margin-top: 0.6rem;
+          @include bgnrcbc(1rem,'../assets/img/yqhy/3yuan');
+          background-size: contain;
+          width: 1.55rem;
+          height: 0.72rem;
+          font-size: 0.43rem;
+          font-weight: 600;
+          line-height: 0.75rem;
+          color:#fff;
+        }
+        .list-conter-box3{
+          width: 1.55rem;
+          height: 0.72rem;
+          font-size: 0.35rem;
+          line-height: 0.75rem;
+          color:#777;
+        }
+        .list-conter-box4{
+          height: 0.4rem;
+          .list-conter-boxs{
+            border-radius: 1rem;
+            background-color: #ff930e;
+            float: left;
+            width: 0.267rem;
+            height: 0.267rem;
+            line-height: 0.267rem;
+          }
+          .list-conter-boxx{
+            float: left;
+            width: 2.985rem;
+            height: 0.267rem;
+            margin: 0 0.22rem;
+            box-sizing: border-box;
+            background: url('../assets/img/yqhy/hhr@2x.png') center right no-repeat;
+            background-size: contain;
+          }
+        }
         .list-conter-box{
           border-radius: 0.2rem;
           margin: 0.4rem 0 0.2rem;
@@ -440,22 +430,6 @@ export default {
           }
 
           
-        }
-      }
-      .box3-obtained{
-        .box3-obtained-a{
-          margin:2.08rem 0 0.48rem;
-          font-size:0.4rem;
-          color:#999;
-        }
-        .box3-obtained-b{
-          height:1.067rem;
-          line-height:1.067rem;
-          font-size:0.42rem;
-          color:#fff;
-          background-color:#f44b50;
-          border-radius:0.5rem;
-          margin:0 2.66rem;
         }
       }
       .list-txtNo{

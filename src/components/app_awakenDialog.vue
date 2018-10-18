@@ -157,13 +157,13 @@ import GLOBAL from '@/assets/js/lib/app.global'
               color: #666666;
             }
             .dialog-img-wx{
-              @include bgnrcbc(1.22rem,'../assets/img/icon/wx');
+              @include bgnrcbc(1.2rem,'../assets/img/icon/wx');
             }
             .dialog-img-qq{
-              @include bgnrcbc(1.22rem,'../assets/img/icon/QQ');
+              @include bgnrcbc(1.2rem,'../assets/img/icon/QQ');
             }
             .dialog-img-dx{
-              @include bgnrcbc(1.22rem,'../assets/img/icon/dx');
+              @include bgnrcbc(1.2rem,'../assets/img/icon/dx');
             }
           }
         }

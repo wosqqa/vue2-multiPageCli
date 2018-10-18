@@ -30,7 +30,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.video-play{
-	
-}
+
 </style>

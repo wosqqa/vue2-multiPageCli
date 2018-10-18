@@ -12,7 +12,7 @@
 		</div>
 		<div  class="code-split"></div>
 		<div class="code-container">
-			<div class="code-img"><img src="../../assets/invite/yqjinbi.png" alt="" srcset=""></div>
+			<div class="code-img"><img src="../../assets/img/invite/yqjinbi.png" alt="" srcset=""></div>
 			<div class="code-red">邀请好友赚大钱</div>
 			<div class="code-info code-info-money">邀请好友赚最高<span class="text-red">215元</span>现金奖励</div>
 			<div class="code-info">您的好友邀请成功，您还可以<span class="text-red">额外获得现金奖励</span></div>
@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import {getInviteCode,jsonpGetData} from '../../scripts/api/api';
-import GLOBAL from '../../scripts/util/app.global'
+import {getInviteCode,jsonpGetData} from '@/api/api';
+import GLOBAL from '@/assets/js/lib/app.global'
 
 	export default {
 		data() {
@@ -127,5 +127,5 @@ import GLOBAL from '../../scripts/util/app.global'
 </script>
 
 <style scoped lang="scss">
-@import "../../styles/to_invite.scss";
+@import "../../assets/scss/to_invite.scss";
 </style>

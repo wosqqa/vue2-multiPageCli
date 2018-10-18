@@ -8,11 +8,16 @@
                   </div>
                   <div class="dialog-cont">
                       <div class="dialog-title"></div>
-                      <div class="dialog-li"><div  class="list-li-title">1</div><div v-html="replaceHtmlRed(myParam.apprentice_rule.text1,1)"></div></div>
-                      <div class="dialog-txt" v-html="replaceHtmlRed(myParam.apprentice_rule.text2,1)">
+                      <div class="dialog-li" v-if="myParam.inviteType=='1'"><div  class="list-li-title">1</div><div v-html="replaceHtmlRed(myReplace(myParam.apprentice_rule.text1,'9','8'),1)"></div></div>
+                      <div class="dialog-li" v-else><div  class="list-li-title">1</div><div v-html="replaceHtmlRed(myReplace(myParam.apprentice_rule.text1,'9','13.5'),1)"></div></div>
+                      <div class="dialog-txt" v-if="myParam.inviteType=='1'" v-html="replaceHtmlRed(myReplace(myParam.apprentice_rule.text2,'9','8'),1)">
                       </div>
+                      <div class="dialog-txt" v-else v-html="replaceHtmlRed(myReplace(myParam.apprentice_rule.text2,'9','13.5'),1)">
+                      </div>
+
                       <div class="dialog-li"><div  class="list-li-title">2</div><div>{{myParam.apprentice_rule.text3}}</div></div>
                       <div class="dialog-txt" v-html="replaceHtmlRed(myParam.apprentice_rule.text4,3)"></div>
+                      <!-- <div class="dialog-li"><div  class="list-li-title">3</div><div v-html="replaceHtmlRed('新注册用户，14日内邀请好友奖励提升<%%1.5倍 %%>。',3)"></div></div> -->
                       <div class="dialog-subtitle"></div>
                       <div class="dialog-li"><div  class="list-li-title">1</div><div>{{myParam.apprentice_rule.text5}}</div></div>
                       <div class="dialog-txt" v-html="replaceHtmlRed(myParam.apprentice_rule.text6,3)"></div>
@@ -40,6 +45,9 @@ import stringUtils from '@/assets/js/string.utils'
 		methods: {
 			replaceHtmlRed: function (value,type) {
             return stringUtils.replaceRed(value,type)
+      },
+      myReplace: function (value,f,t) {
+            return stringUtils.myReplace(value,f,t)
       },
       dialogClose(){
         this.$emit('closeRenticeDialog',false);

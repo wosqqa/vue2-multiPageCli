@@ -52,12 +52,12 @@
           <div class="list-box3-road" id="list-box3-road"  v-show="navActive=='3'">
 							<div class="list-packet" >您有<span class="num_app">{{envelopeData.road_count}}份</span>红包在路上</div>
               <div class="list-tip"  >
-                  <span class="txt-red"></span>好友在邀请当日进贡满<span class="txt-red"><span class="youxiao-line">60</span>金币</span>，你就可获得红包。
+                  <span class="txt-red"></span>好友在邀请当日获得满<span class="txt-red"><span class="youxiao-line">20</span>金币</span>，你就可获得红包。
               </div>
               <div class="list-box3-roll" v-if="threeData.length>0">
 								<div class="list-txt" v-for="(item,index) in threeData" :key="index">
 									<div class="list-img"><img class="lazy"  v-lazy="item.head=='' ? envelopeData.init.default_head : item.head" style="display: inline;"></div>
-									<div class="list-user"><span class="list-user-nick" v-text="(item.nick==''|| item.nick==null) ?  '头条用户': item.nick"></span><span class="list-user-sp">进贡未满60金币，红包还在路上~</span></div>
+									<div class="list-user"><span class="list-user-nick" v-text="(item.nick==''|| item.nick==null) ?  '头条用户': item.nick"></span><span class="list-user-sp">获得未满20金币，红包还在路上~</span></div>
 									<div class="list-gx"><p class="list-line"></p></div>
 								</div>
 							</div>

@@ -27,7 +27,7 @@ module.exports = webpackMerge(webpackBase, {
           {
             loader: 'sass-resources-loader',
             options: {
-              resources: path.resolve(__dirname, '../src/styles/lib/main.scss'),
+              resources: path.resolve(__dirname, '../src/assets/scss/lib/main.scss'),
             }
           }
         ]
@@ -73,6 +73,9 @@ module.exports = webpackMerge(webpackBase, {
       errors: true,
       warnings: true,
     },
+    compress: true, // 服务器返回浏览器的时候是否启动gzip压缩
+    host: '172.18.5.108',      // 默认是localhost
+    port: 8888,             // 端口
     open: true // 服务启动后 打开浏览器
   }
 });

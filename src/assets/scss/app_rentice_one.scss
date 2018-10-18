@@ -1,0 +1,272 @@
+@import './common/_tools.scss';
+
+.text-red{
+    color: red;
+}
+
+@keyframes myfirstscoll {
+    0% {
+        // margin-left: 0rem;
+        transform: translate3d(50%, 0, 0);
+    }
+
+    100% {
+        // margin-left: -8rem;
+        transform: translate3d(-70%, 0, 0);
+    }
+}
+
+.rentice_one-container{
+    // display: flex;
+    // flex-flow: column nowrap;
+    // justify-content: space-between;
+    -webkit-overflow-scrolling: touch;  
+    .top-tips{
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        text-align: center;
+    }
+    .rentice_top{
+        position: fixed;
+        width: 100%;
+        top: 50px;
+        background-color: #ffe6ba;
+        height: 0.8rem;
+        line-height: 0.85rem;
+        color: #b86d0b;
+        z-index: 101;
+        font-size: 0.35rem;
+        padding-left: 0.4rem;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0.2rem;
+            width: .42rem;
+            height: .42rem;
+            margin-top: 0.2rem;
+            background: url('../../assets/img/share/guangbo.png') center right no-repeat;
+            background-size: 100%;
+        }
+        .rentice_top_txt{
+            margin-left: 0.4rem;
+            position: relative;
+            white-space: normal;
+            width: 8.5rem;
+            height: 0.75rem;
+            display: inline-block;
+            overflow: hidden;
+            display: block;
+            width: 90%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            .rentice_top_txtscoll{
+                animation: myfirstscoll 15s infinite linear;
+                width: 20rem;
+            }
+        }
+    }
+    .rentice_box1{
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        background-size: cover;
+        vertical-align: middle;
+        -webkit-overflow-scrolling: touch;  
+        overflow-y: scroll;
+        // height: 4.1rem;
+        background-image: url('../../assets/img/share/fxbg.png');
+        background-repeat: no-repeat;
+        .box1-tez{
+            font-size: 0.6rem;
+            color: #fff;
+            margin: 0.5rem 0 0rem 0.9rem;
+            text-align: center;
+            // @include bgnrcbc(1rem,'../../assets/img/yqhy/top-txt');
+            background-repeat: no-repeat;
+            position: relative;
+            display: inline-block;
+            background-size: cover;
+            height: 1rem;
+            width: 7.7rem;
+            box-sizing: border-box;
+            background-size: 100%;
+            margin: 0.5rem 1rem 0.1rem;
+        }
+        .box1-btn{
+            font-size: 0.50rem;
+            font-weight: 600;
+            // background-color: #ffee0c;
+            @include bgnrcbc(1.1rem,'../../assets/img/yqhy/yqbtn');
+            width: 4.9rem;
+            height: 1.2rem;
+            text-align: center;
+            margin: 0.1rem 2.5rem;
+            color: #f54c50;
+            line-height: 1.2rem;
+            background-size: contain;
+            border-radius: 0.9rem;
+        }
+        .box1-yqm{
+            height: 0.625rem;
+            line-height: 0.615rem;
+            color: #fff;
+            font-size: 0.44rem;
+            margin: 0.2rem 0 0.4rem;
+            text-align: center;
+            span{
+                margin-left: 0.1rem;
+                font-size: 0.345rem;
+                border-radius: 1rem;
+                background-color: rgba(255, 255, 255, 0.103);
+                border:1px solid #fff;
+                padding: 0.15rem 0.25rem 0.1rem;
+            }
+        }
+        .box1-right{
+            color: #f54c50;
+            background-image: url('../../assets/img/share/guize@2x.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 0.8rem;
+            height: 2.4rem;
+            position: absolute;
+            top: 1rem;
+            right: 0rem;
+            font-size: 0.4rem;
+            z-index: 100;
+            padding-left: 0.3rem;
+        }
+    }
+    .rentice_box2{
+        // position: absolute;
+        // right: 0;   
+        // bottom: 0;   
+        // left: 0;  
+        // top: 0;  
+        // margin-top: 4.1rem; 
+        position:static;
+        #dialogFrame{
+            z-index: -1;
+            width: 100%; 
+        }
+    }
+    .rentice_box3{
+        .popup-close{
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.34rem;
+            border-top: 1px solid #e8e8e8;
+        }
+        .video-share{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 3000;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+        }
+        .video-share-btn{
+            background-color: #4e9af2;
+            margin: 0.5rem 3rem;
+            line-height: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            color: #fff;
+            font-size: 0.38rem;
+        }
+    }
+    .rentice_box4-tip{
+        position: fixed;
+        bottom: 1.5rem;
+        right: 0.54rem;
+        height: 0.854rem;
+        line-height: 0.854rem;
+        z-index: 100;
+        color: #fff;
+        padding: 0 0.4rem;
+        margin-bottom: 0.19rem;
+        font-size: 0.375rem;
+        border-radius: 1rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-top: 1px solid #000;
+        span{
+            color: #fff600;
+        }
+    }
+    .rentice_box4{
+        position: fixed;
+        // -webkit-transform: translateZ(0);
+        -webkit-transform: translate3d(0,0,0);
+        bottom: 0;
+        width: 100%;
+        height: 1.5rem;
+        z-index: 100;
+        background-color: #fff;
+        border-top: 1px solid #f1f1f1;
+        .rentice_box4-c{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            padding: 0.2rem 0;
+            line-height: 1.42rem;
+            margin: 0 0.5rem;
+            .list-bottom-copy{
+                background: url('../../assets/img/share/copy@2x.gif') center right no-repeat;
+                background-size: contain;
+                width: 2.8rem;
+                height: 1.07rem;
+                border-radius: 0.5rem;
+                box-sizing: border-box
+            }
+            .list-bottom-btnc{
+                background: url('../../assets/img/share/gkq_share@2x.png') center right no-repeat;
+                background-size: contain;
+                background-position: left;
+                width: 5.9rem;
+                height: 1.07rem;
+              }
+            .list-bottom-btn{
+                @include bgnrcbc(1rem,'../../assets/img/yqhy/goToshare');
+                background-size: contain;
+                width: 9rem;
+                height: 1.1rem;
+                
+              }
+              .list-bottom-btn2{
+                @include bgnrcbc(1rem,'../../assets/img/yqhy/goTohd');
+                background-size: contain;
+                width: 9rem;
+                height: 1.1rem;
+              }
+        }
+        // box-shadow: 0px 0px 1px #888888;
+    }
+    .popup-modal{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        background: #000;
+    }   
+    .dialog-toast{
+        position: fixed;
+        left: 33%;
+        top: 45%;
+        width: 3.5rem;
+        height: 1.5rem;
+        font-size: 0.38rem;
+        line-height: 0.5rem;
+        opacity: .7;
+        text-align: center;
+        color: #fff;
+        border-radius: 0.2rem;
+        background: #000;
+        padding: 0.25rem 0.2rem;
+    }
+}
