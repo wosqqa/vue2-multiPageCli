@@ -46,7 +46,7 @@
             width: .42rem;
             height: .42rem;
             margin-top: 0.2rem;
-            background: url('../../assets/img/share/guangbo.png') center right no-repeat;
+            background: url('../../assets/share/guangbo.png') center right no-repeat;
             background-size: 100%;
         }
         .rentice_top_txt{
@@ -77,14 +77,14 @@
         -webkit-overflow-scrolling: touch;  
         overflow-y: scroll;
         // height: 4.1rem;
-        background-image: url('../../assets/img/share/fxbg.png');
+        background-image: url('../../assets/share/fxbg.png');
         background-repeat: no-repeat;
         .box1-tez{
             font-size: 0.6rem;
             color: #fff;
             margin: 0.5rem 0 0rem 0.9rem;
             text-align: center;
-            @include bgnrcbc(1rem,'../../assets/img/yqhy/top-txt');
+            @include bgnrcbc(1rem,'../../assets/yqhy/top-txt');
             width: 7.7rem;
             box-sizing: border-box;
             background-size: 100%;
@@ -94,7 +94,7 @@
             font-size: 0.50rem;
             font-weight: 600;
             // background-color: #ffee0c;
-            @include bgnrcbc(1.1rem,'../../assets/img/yqhy/yqbtn');
+            @include bgnrcbc(1.1rem,'../../assets/yqhy/yqbtn');
             width: 4.9rem;
             height: 1.2rem;
             text-align: center;
@@ -112,7 +112,7 @@
         }
         .box1-right{
             color: #f54c50;
-            background-image: url('../../assets/img/share/guize@2x.png');
+            background-image: url('../../assets/share/guize@2x.png');
             background-repeat: no-repeat;
             background-size: contain;
             width: 0.8rem;
@@ -200,7 +200,7 @@
             line-height: 1.42rem;
             margin: 0 0.5rem;
             .list-bottom-copy{
-                background: url('../../assets/img/share/copy@2x.gif') center right no-repeat;
+                background: url('../../assets/share/copy@2x.gif') center right no-repeat;
                 background-size: contain;
                 width: 2.8rem;
                 height: 1.07rem;
@@ -208,21 +208,21 @@
                 box-sizing: border-box
             }
             .list-bottom-btnc{
-                background: url('../../assets/img/share/gkq_share@2x.png') center right no-repeat;
+                background: url('../../assets/share/gkq_share@2x.png') center right no-repeat;
                 background-size: contain;
                 background-position: left;
                 width: 5.9rem;
                 height: 1.07rem;
               }
             .list-bottom-btn{
-                @include bgnrcbc(1rem,'../../assets/img/yqhy/goToshare');
+                @include bgnrcbc(1rem,'../../assets/yqhy/goToshare');
                 background-size: contain;
                 width: 9rem;
                 height: 1.1rem;
                 
               }
               .list-bottom-btn2{
-                @include bgnrcbc(1rem,'../../assets/img/yqhy/goTohd');
+                @include bgnrcbc(1rem,'../../assets/yqhy/goTohd');
                 background-size: contain;
                 width: 9rem;
                 height: 1.1rem;

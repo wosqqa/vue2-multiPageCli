@@ -102,7 +102,7 @@ module.exports = webpackMerge(webpackBase, {
       dry: false,
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[chunkhash:8].css'
+      filename: 'static/css/[name].[chunkhash:8].css'
     })
   ]
 });

@@ -73,8 +73,8 @@
 </template>
 
 <script>
-import { wakeupApprenticeList,hostname,giveRedEnvelope,jsonpGetData } from "@/api/api";
-import GLOBAL from '@/assets/js/lib/app.global'
+import { wakeupApprenticeList,hostname,giveRedEnvelope,jsonpGetData } from "@/scripts/api/api";
+import GLOBAL from '@/scripts/util/app.global'
 const userItem = resolve => require(["@/components/userItem.vue"], resolve);
 export default {
   props: ["myParam","isCopy"],
@@ -222,7 +222,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/common/_tools.scss";
+@import "../../styles/common/_tools.scss";
 		
 .list-container {
   background: #fff;
@@ -316,7 +316,7 @@ export default {
           width: 1.9rem;
           height: 2.03rem;
           .list-conter-day{
-            @include bgnrcbc(1rem,'../assets/img/yqhy/days');
+            @include bgnrcbc(1rem,'../assets/yqhy/days');
             width: 1.4rem;
             height: 0.7rem;
             line-height: 0.55rem;
@@ -381,7 +381,7 @@ export default {
         }
         .list-li-title{
           color: #ffffff;
-          @include bgnrcbc(1rem,'../assets/img/yqhy/xhbg');
+          @include bgnrcbc(1rem,'../assets/yqhy/xhbg');
           width: 0.51rem;
           height: 0.51rem;
           line-height: 0.55rem;
@@ -392,7 +392,7 @@ export default {
           margin-left: 0;
         }
         .list-li-share{
-          background: url('../assets/img/share/txt-bg@2x.png') center right no-repeat;
+          background: url('../assets/share/txt-bg@2x.png') center right no-repeat;
           background-size: contain;
           margin: 0 auto;
           width: 9rem;

@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import GLOBAL from '@/assets/js/lib/app.global'
+import GLOBAL from '@/scripts/util/app.global'
 	export default {
 		props:[
             'myParam'
@@ -111,7 +111,7 @@ import GLOBAL from '@/assets/js/lib/app.global'
 </script>
 
 <style scoped lang="scss">
-@import '../assets/scss/common/_tools.scss';
+@import '../../styles/common/_tools.scss';
 .awaken-container-dialog{
     // @include dialog();
     .dialog-content{
@@ -129,7 +129,7 @@ import GLOBAL from '@/assets/js/lib/app.global'
         overflow-y: auto;
         height: 96%;
         .dialog-title{
-          @include bgnrcbc(1.2rem,'../assets/img/icon/fsxxtx');
+          @include bgnrcbc(1.2rem,'../assets/icon/fsxxtx');
           background-position: center;
           background-size: 80%;
           width: 100%;
@@ -157,13 +157,13 @@ import GLOBAL from '@/assets/js/lib/app.global'
               color: #666666;
             }
             .dialog-img-wx{
-              @include bgnrcbc(1.22rem,'../assets/img/icon/wx');
+              @include bgnrcbc(1.22rem,'../assets/icon/wx');
             }
             .dialog-img-qq{
-              @include bgnrcbc(1.22rem,'../assets/img/icon/QQ');
+              @include bgnrcbc(1.22rem,'../assets/icon/QQ');
             }
             .dialog-img-dx{
-              @include bgnrcbc(1.22rem,'../assets/img/icon/dx');
+              @include bgnrcbc(1.22rem,'../assets/icon/dx');
             }
           }
         }

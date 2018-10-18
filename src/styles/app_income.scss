@@ -17,7 +17,7 @@
         height: 2rem;
         line-height: 2rem;
         text-align: center;
-        background: url('../../assets/img/share/one@2x.png') center right no-repeat;
+        background: url('../../assets/share/one@2x.png') center right no-repeat;
         background-size: contain;
         background-position: center;
         margin: 0.15rem 0.5rem 0.1rem;
@@ -29,7 +29,7 @@
         margin-left: auto;
         margin-right: auto;
         .swiper-button-next{
-          @include back-img('../../assets/img/icon/shaishourur');
+          @include back-img('../../assets/icon/shaishourur');
           background-size: 100%;
           width: 0.43rem;
           height: 0.8rem;
@@ -40,7 +40,7 @@
           background-repeat: no-repeat;
         }
         .swiper-button-prev{
-          @include back-img('../../assets/img/icon/shaishourul');
+          @include back-img('../../assets/icon/shaishourul');
           background-size: 100%;
           width: 0.43rem;
           height: 0.8rem;
@@ -162,7 +162,7 @@
             div{
               width: 2.67rem;
               height: 1.67rem;
-              @include back-img('../../assets/img/icon/shaishouruxz');
+              @include back-img('../../assets/icon/shaishouruxz');
               background-position: center;
               background-size: 22%;
               height: 100%;
@@ -207,7 +207,7 @@
       margin: 0;
       .box-bottom-btn{
         margin: 0;
-        background: url('../../assets/img/share/next@2x.png') center right no-repeat;
+        background: url('../../assets/share/next@2x.png') center right no-repeat;
         background-size: contain;
         background-position: center;
         height: 1.07rem;
@@ -224,7 +224,7 @@
         text-align: center;
         width: 10rem;
         height: 3.87rem;
-        background: url('../../assets/img/share/two@2x.png') center right no-repeat;
+        background: url('../../assets/share/two@2x.png') center right no-repeat;
         background-size: 90%;
         background-position: left;
         margin: 0 0.5rem;
@@ -280,13 +280,13 @@
       .dialog-f{
         height: 2.67rem;
         margin: 0.3rem 0.67rem;
-        background: url('../../assets/img/share/liu@2x.png') center right no-repeat;
+        background: url('../../assets/share/liu@2x.png') center right no-repeat;
         background-size: 100%;
         background-position: center;
         box-sizing: border-box;
       }
       .dialog-d{
-          background: url('../../assets/img/share/btip@2x.png') center right no-repeat;
+          background: url('../../assets/share/btip@2x.png') center right no-repeat;
           background-size: contain;
           margin: 0 auto;
           width: 8.5rem;
@@ -319,7 +319,7 @@
         bottom: 0;
         margin: 0.21rem 0.5rem;
         box-sizing: border-box;
-        background: url('../../assets/img/share/sharebtn@2x.png') center right no-repeat;
+        background: url('../../assets/share/sharebtn@2x.png') center right no-repeat;
         background-size: contain;
         background-position: center;
         height: 1.07rem;

@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import {getInviteCode} from '@/api/api';
-import GLOBAL from '@/assets/js/lib/app.global'
+import {getInviteCode} from '@/scripts/api/api';
+import GLOBAL from '@/scripts/util/app.global'
 
 	export default {
 		props:[
@@ -138,14 +138,12 @@ import GLOBAL from '@/assets/js/lib/app.global'
 
 <style lang="scss">
 
-@import '../assets/scss/common/_tools.scss';
-
+@import '../styles/common/_tools.scss';
 .qr-lottery{
   width: 8.8rem;
   margin: 0 auto;
   height: 7.6rem;
   font-size: 12px;
-//   background-image: url('../../assets/img/sewmbs@3.png');
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
@@ -162,7 +160,7 @@ import GLOBAL from '@/assets/js/lib/app.global'
 			width: 2.62rem;
 			height: 2.214rem;
 			border-radius: 0.2rem;
-			background-image: url('../assets/img/lottery/jbbg.png');
+			background-image: url('../assets/lottery/jbbg.png');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-color: #fff;
@@ -200,7 +198,7 @@ import GLOBAL from '@/assets/js/lib/app.global'
 			}
 		}
 		.active{
-					background-image: url('../assets/img/lottery/czjp.png');
+					background-image: url('../assets/lottery/czjp.png');
 					background-repeat: no-repeat;
 					background-size: cover;
 		}

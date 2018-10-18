@@ -26,7 +26,7 @@ module.exports = {
   entry: Entries,
   output: {
     publicPath: ASSET_PATH,
-    filename: 'js/[name].[hash:8].js',
+    filename: 'static/js/[name].[hash:8].js',
     path: path.resolve(__dirname, '../dist'),
   },
   module: {
@@ -44,9 +44,10 @@ module.exports = {
   },
   resolve: { // 设置模块如何被解析
     alias: {
-      '@components': path.resolve(__dirname, '../src/components'),
-      '@styles': path.resolve(__dirname, '../src/styles'),
-      '@js': path.resolve(__dirname, '../src/scripts'),
+      // '@components': path.resolve(__dirname, '../src/components'),
+      // '@styles': path.resolve(__dirname, '../src/styles'),
+      // '@js': path.resolve(__dirname, '../src/scripts'),
+      '@': path.resolve('src')
     },
     extensions:['*','.css','.js','.vue']
   },
@@ -60,7 +61,7 @@ module.exports = {
       },
       {
         from: path.resolve(__dirname, '../src/scripts/lib'),
-        to: path.resolve(__dirname, '../dist/js/lib')
+        to: path.resolve(__dirname, '../dist/static/js/lib')
       }
     ]),
     ...HTMLPlugins,

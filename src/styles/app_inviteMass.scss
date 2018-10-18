@@ -61,7 +61,7 @@
     overflow-y: scroll;
     height: 100%;
     .list-container-box2{
-      background-image: url(../../assets/img/qfbg.png);
+      background-image: url(../../assets/qfbg.png);
       background-repeat: no-repeat;
       position: relative;
       background-size: contain;
@@ -223,7 +223,7 @@
     flex-flow: column nowrap;
     .wx-container-box1{
       width: 100%;
-      background-image: url(../../assets/img/smjlsbt.png);
+      background-image: url(../../assets/smjlsbt.png);
       background-repeat: no-repeat;
       position: relative;
       display: inline-block;
@@ -231,11 +231,11 @@
       height: 4.5rem;
     }
     .wx-container-box2{
-      background-image: url('../../assets/img/wxbg.png');
+      background-image: url('../../assets/wxbg.png');
       background-position-y: 75%;
       padding: 0 7% 5% 7%;
       .wx-imgone{
-        @include back-img('../../assets/img/wxbg');
+        @include back-img('../../assets/wxbg');
         background-repeat: no-repeat;
         position: relative;
         display: inline-block;
@@ -244,7 +244,7 @@
         width: 100%;
       }
       .wx-imgtwo{
-        @include back-img('../../assets/img/wxsmxc');
+        @include back-img('../../assets/wxsmxc');
         background-repeat: no-repeat;
         position: relative;
         display: inline-block;
@@ -253,7 +253,7 @@
         width: 100%;
       }
       .wx-imgthree{
-        @include back-img('../../assets/img/wxsmxz');
+        @include back-img('../../assets/wxsmxz');
         background-repeat: no-repeat;
         position: relative;
         display: inline-block;
@@ -273,7 +273,7 @@
       padding: 0 5%;
       font-size: 0.44rem;
       .box3-open{
-        background-image: url(../../assets/img/openwx.png);
+        background-image: url(../../assets/openwx.png);
         background-repeat: no-repeat;
         position: relative;
         display: inline-block;

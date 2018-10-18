@@ -40,7 +40,7 @@
       padding-top: .2rem;
       background-color: #f4f4f4;
       .list-sf{
-        @include list-title('../../assets/img/icon/mysf');
+        @include list-title('../../assets/icon/mysf');
         @include list-txt();
       }
     }
@@ -48,7 +48,7 @@
       padding-top: .2rem;
       background-color: #f4f4f4;
       .list-sf{
-        @include list-title('../../assets/img/icon/myte');
+        @include list-title('../../assets/icon/myte');
         @include list-txt();
         .list-txt{
           border-bottom: 1px solid #f4f4f4;
@@ -70,14 +70,14 @@
 
   
   .dsciple-container-nothing{
-      @include container-nothing('../../assets/img/icon/wdtekb');
+      @include container-nothing('../../assets/icon/wdtekb');
       padding: 2.59rem 0;
       -webkit-overflow-scrolling: touch;
       margin: 0 auto;
   }
 
   .awaken-container-nothing{
-    @include container-nothing('../../assets/img/icon/whhte');
+    @include container-nothing('../../assets/icon/whhte');
     padding: 2.59rem 0;
     position: absolute;
     margin: 0 auto;
@@ -85,7 +85,7 @@
 
   #dsciple-box5-dialog{
     .container-box5{
-      @include bgnrcbc(1rem,'../../assets/img/icon/fcsbte');
+      @include bgnrcbc(1rem,'../../assets/icon/fcsbte');
       top: 90%;
       right: 0;
       position: fixed;

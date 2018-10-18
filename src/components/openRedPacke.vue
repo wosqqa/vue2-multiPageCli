@@ -67,8 +67,8 @@
 </template>
 
 <script>
-import { giveRedEnvelope,jsonpGetData } from "@/api/api";
-import GLOBAL from '@/assets/js/lib/app.global'
+import { giveRedEnvelope,jsonpGetData } from "@/scripts/api/api";
+import GLOBAL from '@/scripts/util/app.global'
 export default {
   props: ["myParam",'urlParam'],
   data() {
@@ -155,7 +155,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/common/_tools.scss";
+@import "../../styles/common/_tools.scss";
 
 @keyframes myfirst {
         0% {
@@ -241,7 +241,7 @@ export default {
       padding: 4% 0;
     }
     .box2-btn {
-      // @include bgnrcbc(1.5rem,'../assets/img/share/yqbtn');
+      // @include bgnrcbc(1.5rem,'../assets/share/yqbtn');
       background-repeat: no-repeat;
       position: relative;
       display: inline-block;

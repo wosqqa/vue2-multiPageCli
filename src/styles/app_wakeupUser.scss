@@ -33,7 +33,7 @@
             padding-top: 1.85rem;
             -webkit-overflow-scrolling: touch;
             .list-sf{
-                @include list-title('../../assets/img/icon/myte');
+                @include list-title('../../assets/icon/myte');
                 @include list-txt();
                 .list-txt{
                 border-bottom: 1px solid #f4f4f4;
@@ -43,7 +43,7 @@
         }
     }
   .awaken-container-nothing{
-    @include container-nothing('../../assets/img/icon/whhte');
+    @include container-nothing('../../assets/icon/whhte');
     padding-top: 2.8rem;
     position: absolute;
     margin: 0 auto;

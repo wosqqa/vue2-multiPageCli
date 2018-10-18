@@ -3,7 +3,7 @@
     <div v-show="currentValue" class="popup" :class="[position ? 'popup-' + position : '']">
       <appRenticeShare ref="appRenticeShare" @openPopup="openPopup" @openShareApp="openShareApp"></appRenticeShare>
 				<div v-if="videoPlayShowTips" style="font-size: 13px;padding-bottom: 0.26rem;color: #333333;text-align: center;background-color: #f0f0f0;">不能用
-					<img src="../assets/img/share/weixin@2x.png" style="height:1.1rem;width:1.1rem;vertical-align: middle;" />
+					<img src="../assets/share/weixin@2x.png" style="height:1.1rem;width:1.1rem;vertical-align: middle;" />
 				 微信分享<span style="color: #55AAEC;" @click="openVideoPlay(true)"> “点击查看教程”</span></div>
 				<div  class="popup-close"  @click="openPopup(false)">取消</div>
     </div>
@@ -14,8 +14,8 @@
 <script type="text/babel">
 import Popup from "vue-popup";
 import "vue-popup/lib/popup.css";
-import { hostname } from "@/api/api";
-import GLOBAL from "@/assets/js/lib/app.global";
+import { hostname } from "@/scripts/api/api";
+import GLOBAL from "@/scripts/util/app.global";
 const videoPlay = resolve =>
   require(["@/components/app_videoPlay.vue"], resolve);
 const appRenticeShare = resolve =>

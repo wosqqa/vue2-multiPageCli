@@ -28,7 +28,7 @@
     border-radius: .15rem;
     text-align: center;
     .box1-img-jl{
-      // background-image: url('../../assets/img/stjldt.gif');
+      // background-image: url('../../assets/stjldt.gif');
       // background-repeat: no-repeat;
       position: relative;
       display: inline-block;
@@ -40,7 +40,7 @@
     .box1-img-wh{
       width: 0.5rem;
       margin-left: 0.1rem;
-      @include bgnrcbc(0.5rem,'../../assets/img/icon/wh');
+      @include bgnrcbc(0.5rem,'../../assets/icon/wh');
       vertical-align:middle;
     }
   }
@@ -73,31 +73,31 @@
     }
     .box3-img-wx{
       margin: .1rem;
-      @include bgnrcbc(1.2rem,'../../assets/img/icon/wx');
+      @include bgnrcbc(1.2rem,'../../assets/icon/wx');
     }
     .box3-img-qq{
       margin: .1rem;
-      @include bgnrcbc(1.2rem,'../../assets/img/icon/QQ');
+      @include bgnrcbc(1.2rem,'../../assets/icon/QQ');
     }
     .box3-img-dx{
       margin: .1rem;
-      @include bgnrcbc(1.2rem,'../../assets/img/icon/dx');
+      @include bgnrcbc(1.2rem,'../../assets/icon/dx');
     }
     .box3-img-wb{
       margin: .1rem;
-      @include bgnrcbc(1.2rem,'../../assets/img/icon/wb');
+      @include bgnrcbc(1.2rem,'../../assets/icon/wb');
     }
     .box3-img-qf{
       margin: .1rem;
-      @include bgnrcbc(1.2rem,'../../assets/img/icon/qf');
+      @include bgnrcbc(1.2rem,'../../assets/icon/qf');
     }
     .box3-img-pyq{
       margin: .1rem;
-      @include bgnrcbc(1.2rem,'../../assets/img/icon/pyq');
+      @include bgnrcbc(1.2rem,'../../assets/icon/pyq');
     }
     .box3-img-ewm{
       margin: .1rem;
-      @include bgnrcbc(1.2rem,'../../assets/img/icon/ewm');
+      @include bgnrcbc(1.2rem,'../../assets/icon/ewm');
     }
   }
   .con-box4{
@@ -116,18 +116,18 @@
       .box4-img-ssr{
         vertical-align:middle;
         margin-right: 0.05rem;
-        @include bgnrcbc(0.5rem,'../../assets/img/icon/ssr');
+        @include bgnrcbc(0.5rem,'../../assets/icon/ssr');
       }
       .box4-img-hxhy{
         vertical-align:middle;
         margin-right: 0.05rem;
-        @include bgnrcbc(0.5rem,'../../assets/img/icon/hxhy');
+        @include bgnrcbc(0.5rem,'../../assets/icon/hxhy');
       }
     }
   }
   .con-box5{
     .box5-txt-hcwf{
-      @include bgnrcbc(0.8rem,'../../assets/img/icon/sthchwf');
+      @include bgnrcbc(0.8rem,'../../assets/icon/sthchwf');
       background-position: center;
       background-size: 70%;
       width: 100%;
@@ -276,7 +276,7 @@
       height: 0.4rem;
       span{
         float: right;
-        @include bgnrcbc(0.4rem,'../../assets/img/icon/gzclose');
+        @include bgnrcbc(0.4rem,'../../assets/icon/gzclose');
       }
     }
     .dialog-cont{
@@ -284,7 +284,7 @@
       -webkit-overflow-scrolling: touch;
       height: 96%;
       .dialog-title{
-        @include bgnrcbc(1rem,'../../assets/img/icon/jlffgz');
+        @include bgnrcbc(1rem,'../../assets/icon/jlffgz');
         background-position: center;
         background-size: 80%;
         width: 100%;
@@ -310,7 +310,7 @@
         padding: 0.5rem 0;
         .dialog-img{
           flex: 1;
-          @include bgnrcbc(0.8rem,'../../assets/img/icon/jlffgzh');
+          @include bgnrcbc(0.8rem,'../../assets/icon/jlffgzh');
           background-size: 90%;
           width: auto;
           height: auto;

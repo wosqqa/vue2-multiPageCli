@@ -53,7 +53,7 @@ import stringUtils from '@/assets/js/string.utils'
 </script>
 
 <style scoped lang="scss">
-@import '../assets/scss/common/_tools.scss';
+@import '../../styles/common/_tools.scss';
 
 //规则弹层
 .myrentice-container-dialog{
@@ -74,7 +74,7 @@ import stringUtils from '@/assets/js/string.utils'
       z-index: 100;
       span{
         float: right;
-        @include bgnrcbc(0.4rem,'../assets/img/icon/gzclose');
+        @include bgnrcbc(0.4rem,'../assets/icon/gzclose');
       }
     }
     .dialog-cont{
@@ -83,7 +83,7 @@ import stringUtils from '@/assets/js/string.utils'
       -webkit-overflow-scrolling: touch;
       height: 96%;
       .dialog-title{
-        @include bgnrcbc(1rem,'../assets/img/icon/jlffgz');
+        @include bgnrcbc(1rem,'../assets/icon/jlffgz');
         background-position: center;
         background-size: 80%;
         width: 100%;
@@ -96,7 +96,7 @@ import stringUtils from '@/assets/js/string.utils'
         margin: 0.2rem 0 0;
       }
       .dialog-btn{
-        @include bgnrcbc(1rem,'../assets/img/icon/jlff');
+        @include bgnrcbc(1rem,'../assets/icon/jlff');
         background-position: center;
         background-size: 80%;
         color: #fff;
@@ -111,7 +111,7 @@ import stringUtils from '@/assets/js/string.utils'
         padding: 0.5rem 0 0.3rem;
         height: 4.2rem;
         .dialog-img{
-          @include bgnrcbc(0.8rem,'../assets/img/icon/jlffgzh');
+          @include bgnrcbc(0.8rem,'../assets/icon/jlffgzh');
           background-size: 90%;
           width: 3.5rem;
           height: 3.2rem;

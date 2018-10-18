@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import GLOBAL from '@/assets/js/lib/app.global'
+import GLOBAL from '@/scripts/util/app.global'
 import stringUtils from '@/assets/js/string.utils'
 	export default {
 		props:[
@@ -51,7 +51,7 @@ import stringUtils from '@/assets/js/string.utils'
 </script>
 
 <style scoped lang="scss">
-@import '../assets/scss/common/_tools.scss';
+@import '../../styles/common/_tools.scss';
 
 //规则弹层
 .myrentice-container-dialog{
@@ -72,7 +72,7 @@ import stringUtils from '@/assets/js/string.utils'
       z-index: 100;
       span{
         float: right;
-        @include bgnrcbc(0.4rem,'../assets/img/icon/gzclose');
+        @include bgnrcbc(0.4rem,'../assets/icon/gzclose');
       }
     }
     .dialog-cont{
@@ -81,7 +81,7 @@ import stringUtils from '@/assets/js/string.utils'
       -webkit-overflow-scrolling: touch;
       height: 96%;
       .dialog-title{
-        @include bgnrcbc(1rem,'../assets/img/yqhy/gzjli');
+        @include bgnrcbc(1rem,'../assets/yqhy/gzjli');
         background-position: center;
         background-size: 100%;
         margin: 0.2rem 1rem 0;
@@ -89,7 +89,7 @@ import stringUtils from '@/assets/js/string.utils'
         height: 0.75rem;
       }
       .dialog-subtitle{
-        @include bgnrcbc(1rem,'../assets/img/yqhy/jingong');
+        @include bgnrcbc(1rem,'../assets/yqhy/jingong');
         background-position: center;
         background-size: 100%;
         margin: 0.3rem 2rem 0;
@@ -110,7 +110,7 @@ import stringUtils from '@/assets/js/string.utils'
           }
           .list-li-title{
             color: #ffffff;
-            @include bgnrcbc(1rem,'../assets/img/yqhy/guibg');
+            @include bgnrcbc(1rem,'../assets/yqhy/guibg');
             width: 0.65rem;
             height: 0.6rem;
             line-height: 0.6rem;

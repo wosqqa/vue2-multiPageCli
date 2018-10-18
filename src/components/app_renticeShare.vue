@@ -67,7 +67,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/scss/common/_tools.scss";
+@import "../../styles/common/_tools.scss";
 .popup-top-txt{
 		height: 1rem;
 		text-align: center;
@@ -107,31 +107,31 @@ export default {
 			line-height: 0.8rem;
 		}
 		.share-pyq{
-			@include bgnrcbc(1.5rem,'../assets/img/share/pyq_share');
+			@include bgnrcbc(1.5rem,'../assets/share/pyq_share');
     }
     .share-qq{
-			@include bgnrcbc(1.5rem,'../assets/img/share/qq_share');
+			@include bgnrcbc(1.5rem,'../assets/share/qq_share');
     }
     .share-dx{
-			@include bgnrcbc(1.5rem,'../assets/img/share/dx_share');
+			@include bgnrcbc(1.5rem,'../assets/share/dx_share');
     }
     .share-qf{
-			@include bgnrcbc(1.5rem,'../assets/img/share/qf_share');
+			@include bgnrcbc(1.5rem,'../assets/share/qf_share');
 			.rf-text-red{
-				@include bgnrcbc(0.56rem,'../assets/img/share/retip');
+				@include bgnrcbc(0.56rem,'../assets/share/retip');
 				color: #fff;
 				float: right;
 				box-sizing: border-box;
 			}
     }
     .share-wx{
-			@include bgnrcbc(1.5rem,'../assets/img/share/wx_share');
+			@include bgnrcbc(1.5rem,'../assets/share/wx_share');
     }
     .share-mdm{
-			@include bgnrcbc(1.5rem,'../assets/img/share/ewm_share');
+			@include bgnrcbc(1.5rem,'../assets/share/ewm_share');
     }
     .share-wb{
-			@include bgnrcbc(1.5rem,'../assets/img/share/wb_share');
+			@include bgnrcbc(1.5rem,'../assets/share/wb_share');
 		}
 	}
 }

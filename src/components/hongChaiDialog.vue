@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import GLOBAL from '@/assets/js/lib/app.global'
+import GLOBAL from '@/scripts/util/app.global'
 	export default {
 		props:[
             'myParam'
@@ -89,7 +89,7 @@ import GLOBAL from '@/assets/js/lib/app.global'
 </script>
 
 <style scoped lang="scss">
-@import '../assets/scss/common/_tools.scss';
+@import '../../styles/common/_tools.scss';
 .awaken-container-dialog{
     // @include dialog();
     .dialog-content{
@@ -104,14 +104,14 @@ import GLOBAL from '@/assets/js/lib/app.global'
 			padding: .2rem 0.4rem 0.4rem 0.4rem;
 			border-radius: .5rem;
 			.dialog-top-close{
-				@include bgnrcbc(1rem,'../assets/img/share/topClose');
+				@include bgnrcbc(1rem,'../assets/share/topClose');
 				width: 0.7rem;
 				height: 1.3rem;
 				float: right;
 				margin-right: 0.4rem;
 			}
       .dialog-cont{
-				@include bgnrcbc(7.5rem,'../assets/img/share/hongbaoka');
+				@include bgnrcbc(7.5rem,'../assets/share/hongbaoka');
         overflow-y: auto;
 				height: 8.5rem;
 				background-size: 95%;
@@ -169,7 +169,7 @@ import GLOBAL from '@/assets/js/lib/app.global'
 					color: #f33c42;
 					font-size: 0.48rem;
 					margin-top: 0.6rem;
-					@include bgnrcbc(1.5rem,'../assets/img/share/sbutton');
+					@include bgnrcbc(1.5rem,'../assets/share/sbutton');
 					width: 5.2rem;
 					height: 1.4rem;
 					line-height: 1.4rem;

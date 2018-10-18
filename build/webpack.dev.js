@@ -73,6 +73,9 @@ module.exports = webpackMerge(webpackBase, {
       errors: true,
       warnings: true,
     },
+    host: '172.18.5.108',      // 默认是localhost
+    port: 8888,             // 端口
+    // hot: true,               // 开启热更新
     open: true // 服务启动后 打开浏览器
   }
 });

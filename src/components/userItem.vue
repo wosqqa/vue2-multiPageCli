@@ -47,8 +47,8 @@
 </template>
 
 <script>
-import {getInviteCode,hostname} from '@/api/api';
-import GLOBAL from '@/assets/js/lib/app.global'
+import {getInviteCode,hostname} from '@/scripts/api/api';
+import GLOBAL from '@/scripts/util/app.global'
 import stringUtils from '@/assets/js/string.utils'
 	export default {
 		props:[
@@ -105,7 +105,8 @@ import stringUtils from '@/assets/js/string.utils'
 				}else{
 					GLOBAL.App().sentLog(1408)
 				}
-				this.$router.push({ path: 'friendInfo', query: {accid:this.userData.accid}})
+				// this.$router.push({ path: 'friendInfo', query: {accid:this.userData.accid}})
+				window.location.href = '/friendInfo.html?accid='+this.userData.accid
 			}
 		}
 
@@ -115,7 +116,7 @@ import stringUtils from '@/assets/js/string.utils'
 
 <style lang="scss">
 
-@import '../assets/scss/common/_tools.scss';
+@import '../../styles/common/_tools.scss';
 
 .user-info{
 		display:  flex;
@@ -193,7 +194,7 @@ import stringUtils from '@/assets/js/string.utils'
 				// color: #f44b50;
 				color:#ff742a;
 				.list-jinbi{
-					background-image: url('../assets/img/yqhy/csjinbi@2x.png');
+					background-image: url('../assets/yqhy/csjinbi@2x.png');
 					background-repeat: no-repeat;
 					position: relative;
 					display: inline-block;

@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import {getInviteCode,jsonpGetData} from '../../scripts/api/api';
-import GLOBAL from '../../scripts/util/app.global'
+import {getInviteCode,jsonpGetData} from '@/scripts/api/api';
+import GLOBAL from '@/scripts/util/app.global'
 	export default {
 		data() {
 			return {
@@ -125,6 +125,6 @@ import GLOBAL from '../../scripts/util/app.global'
 
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import "../../styles/to_invite.scss";
 </style>
